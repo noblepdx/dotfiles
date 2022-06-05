@@ -1,65 +1,35 @@
-# Configuration for Alacritty, the GPU enhanced terminal emulator.
+#         ___                               __    __
+#        /\_ \                           __/\ \__/\ \__
+#    __  \//\ \      __      ___   _ __ /\_\ \ ,_\ \ ,_\  __  __
+#  /'__`\  \ \ \   /'__`\   /'___\/\`'__\/\ \ \ \/\ \ \/ /\ \/\ \
+# /\ \L\.\_ \_\ \_/\ \L\.\_/\ \__/\ \ \/ \ \ \ \ \_\ \ \_\ \ \_\ \
+# \ \__/.\_\/\____\ \__/.\_\ \____\\ \_\  \ \_\ \__\\ \__\\/`____ \
+#  \/__/\/_/\/____/\/__/\/_/\/____/ \/_/   \/_/\/__/ \/__/ `/___/> \
+#                                                             /\___/
+#                                                             \/__/
+#
+# noblePDX
 
-# Any items in the `env` entry below will be added as
-# environment variables. Some entries may override variables
-# set by alacritty itself.
 env:
-  # TERM variable
-  #
-  # This value is used to set the `$TERM` environment variable for
-  # each instance of Alacritty. If it is not present, alacritty will
-  # check the local terminfo database and use `alacritty` if it is
-  # available, otherwise `xterm-256color` is used.
   TERM: xterm-256color
 
 window:
-  # Window dimensions (changes require restart)
-  #
-  # Specified in number of columns/lines, not pixels.
-  # If both are `0`, this setting is ignored.
   #dimensions:
   #  columns: 0
   #  lines: 0
 
-  # Window position (changes require restart)
-  #
-  # Specified in number of pixels.
-  # If the position is not set, the window manager will handle the placement.
   #position:
   #  x: 0
   #  y: 0
 
-  # Window padding (changes require restart)
-  #
-  # Blank space added around the window in pixels. This padding is scaled
-  # by DPI and the specified value is always added at both opposing sides.
   padding:
     x: 6
     y: 6
 
-  # Spread additional padding evenly around the terminal content.
   dynamic_padding: false
 
-  # Window decorations
-  #
-  # Values for `decorations`:
-  #     - full: Borders and title bar
-  #     - none: Neither borders nor title bar
-  #
-  # Values for `decorations` (macOS only):
-  #     - transparent: Title bar, transparent background and title bar buttons
-  #     - buttonless: Title bar, transparent background, but no title bar buttons
   decorations: none
 
-  # Startup Mode (changes require restart)
-  #
-  # Values for `startup_mode`:
-  #   - Windowed
-  #   - Maximized
-  #   - Fullscreen
-  #
-  # Values for `startup_mode` (macOS only):
-  #   - SimpleFullscreen
   #startup_mode: Windowed
 
   # Window title
@@ -67,189 +37,116 @@ window:
 
   # Window class (Linux/BSD only):
   class:
-    # Application instance name
     instance: Alacritty
-    # General application class
     general: Alacritty
 
-  # GTK theme variant (Linux/BSD only)
-  #
-  # Override the variant of the GTK theme. Commonly supported values are `dark` and `light`.
-  # Set this to `None` to use the default theme variant.
   #gtk_theme_variant: None
 
 scrolling:
-  # Maximum number of lines in the scrollback buffer.
-  # Specifying '0' will disable scrolling.
   history: 10000
-
-  # Number of lines the viewport will move for every line scrolled when
-  # scrollback is enabled (history > 0).
   multiplier: 3
-
-  # Scroll to the bottom when new text is written to the terminal.
   #auto_scroll: false
 
-# Spaces per Tab (changes require restart)
-#
-# This setting defines the width of a tab in cells.
-#
-# Some applications, like Emacs, rely on knowing about the width of a tab.
-# To prevent unexpected behavior in these applications, it's also required to
-# change the `it` value in terminfo when altering this setting.
 #tabspaces: 8
 
-# Font configuration
 font:
-  # Normal (roman) font face
   normal:
-    # Font family
-    #
-    # Default:
-    #   - (macOS) Menlo
-    #   - (Linux/BSD) monospace
-    #   - (Windows) Consolas
     # family: Source Code Pro
     # family: CodeNewRoman Nerd Font
     # family: RobotoMono Nerd Font
-    family: Hack Nerd Font
-    # family: JetBrains Mono
+    # family: Hack Nerd Font
+    family: JetBrainsMono Nerd Font
     # family: UbuntuMono Nerd Font
     # family: Monofur Nerd Font
     # family: TerminessTTF Nerd Font
     # family: Mononoki Nerd Font
 
-    # The `style` can be specified to pick a specific face.
     style: Regular
 
-  # Bold font face
   bold:
-    # Font family
-    #
-    # If the bold family is not specified, it will fall back to the
-    # value specified for the normal font.
     # family: Source Code Pro
     # family: CodeNewRoman Nerd Font
     # family: RobotoMono Nerd Font
-    family: Hack Nerd Font
-    # family: JetBrains Mono
+    # family: Hack Nerd Font
+    family: JetBrainsMono Nerd Font
     # family: UbuntuMono Nerd Font
     # family: Monofur Nerd Font
     # family: TerminessTTF Nerd Font
     # family: Mononoki Nerd Font
 
-    # The `style` can be specified to pick a specific face.
     style: Bold
 
-  # Italic font face
   italic:
-    # Font family
-    #
-    # If the italic family is not specified, it will fall back to the
-    # value specified for the normal font.
     # family: Source Code Pro
     # family: CodeNewRoman Nerd Font
     # family: RobotoMono Nerd Font
-    family: Hack Nerd Font
-    # family: JetBrains Mono
+    # family: Hack Nerd Font
+    family: JetBrainsMono Nerd Font
     # family: UbuntuMono Nerd Font
     # family: Monofuritalic Nerd Font Mono
     # family: TerminessTTF Nerd Font
     # family: Mononoki Nerd Font
 
-    # The `style` can be specified to pick a specific face.
     style: Italic
 
-  # Bold italic font face
   bold_italic:
-    # Font family
-    #
-    # If the bold italic family is not specified, it will fall back to the
-    # value specified for the normal font.
     # family: Source Code Pro
     # family: CodeNewRoman Nerd Font
     # family: RobotoMono Nerd Font
-    family: Hack Nerd Font
-    # family: JetBrains Mono
+    # family: Hack Nerd Font
+    family: JetBrainsMono Nerd Font
     # family: UbuntuMono Nerd Font
     # family: Monofuritalic Nerd Font Mono
     # family: TerminessTTF Nerd Font
     # family: Mononoki Nerd Font
 
-    # The `style` can be specified to pick a specific face.
     style: Bold Italic
 
-  # Point size
   size: 12.0
 
-  # Offset is the extra space around each character. `offset.y` can be thought of
-  # as modifying the line spacing, and `offset.x` as modifying the letter spacing.
   offset:
     x: 0
     y: 0
 
-  # Glyph offset determines the locations of the glyphs within their cells with
-  # the default being at the bottom. Increasing `x` moves the glyph to the right,
-  # increasing `y` moves the glyph upwards.
   #glyph_offset:
   #  x: 0
   #  y: 0
 
-  # Thin stroke font rendering (macOS only)
-  #
-  # Thin strokes are suitable for retina displays, but for non-retina screens
-  # it is recommended to set `use_thin_strokes` to `false`
-  #
-  # macOS >= 10.14.x:
-  #
-  # If the font quality on non-retina display looks bad then set
-  # `use_thin_strokes` to `true` and enable font smoothing by running the
-  # following command:
-  #   `defaults write -g CGFontRenderingFontSmoothingDisabled -bool NO`
-  #
-  # This is a global setting and will require a log out or restart to take
-  # effect.
   #use_thin_strokes: true
 
-# If `true`, bold text is drawn using the bright color variants.
 draw_bold_text_with_bright_colors: true
 
-#######################################
-##      START OF COLOR SCHEMES       ##
-#######################################
-schemes:
-  ### Doom One ###
-  DoomOne: &DoomOne
-    primary:
-      background: '#282c34'
-      foreground: '#bbc2cf'
-    cursor:
-      text: CellBackground
-      cursor: '#528bff'
-    selection:
-      text: CellForeground
-      background: '#3e4451'
-    normal:
-      black:   '#1c1f24'
-      red:     '#ff6c6b'
-      green:   '#98be65'
-      yellow:  '#da8548'
-      blue:    '#51afef'
-      magenta: '#c678dd'
-      cyan:    '#5699af'
-      white:   '#202328'
-    bright:
-      black:   '#5b6268'
-      red:     '#da8548'
-      green:   '#4db5bd'
-      yellow:  '#ecbe7b'
-      blue:    '#3071db'   # This is 2257a0 in Doom Emacs but I lightened it.
-      magenta: '#a9a1e1'
-      cyan:    '#46d9ff'
-      white:   '#dfdfdf'
+###========== SCHEMES ==========>>>
 
-  ### Dracula ###
-  Dracula: &Dracula
+schemes:
+  
+  hyper: &hyper
+    primary:
+      background: '#000000'
+      foreground: '#ffffff'
+    cursor:
+      text: '#f81ce5'
+      cursor: '#ffffff'
+    normal:
+      black:   '#000000'
+      red:     '#fe0100'
+      green:   '#33ff00'
+      yellow:  '#feff00'
+      blue:    '#0066ff'
+      magenta: '#cc00ff'
+      cyan:    '#00ffff'
+      white:   '#d0d0d0'
+    bright:
+      black:   '#808080'
+      red:     '#fe0100'
+      green:   '#33ff00'
+      yellow:  '#feff00'
+      blue:    '#0066ff'
+      magenta: '#cc00ff'
+      cyan:    '#00ffff'
+      white:   '#ffffff'
+
+  dracula: &dracula
     primary:
       background: '#282a36'
       foreground: '#f8f8f2'
@@ -303,16 +200,10 @@ schemes:
       cyan:    '#59dffc'
       white:   '#e6e6d1'
 
-  ### Gruvbox dark ###
-  GruvboxDark: &GruvboxDark
-    # Default colors
+  gruvbox-dark: &gruvbox-dark
     primary:
-      # hard contrast: background = '0x1d2021'
-      background: '#282828'
-      # soft contrast: background = '0x32302f'
+      background: '0x1d2021'
       foreground: '#ebdbb2'
-
-    # Normal colors
     normal:
       black:   '#282828'
       red:     '#cc241d'
@@ -322,8 +213,6 @@ schemes:
       magenta: '#b16286'
       cyan:    '#689d6a'
       white:   '#a89984'
-
-    # Bright colors
     bright:
       black:   '#928374'
       red:     '#fb4934'
@@ -334,14 +223,10 @@ schemes:
       cyan:    '#8ec07c'
       white:   '#ebdbb2'
 
-### Monokai ###
-  MonokaiPro: &MonokaiPro
-    # Default colors
+  monokai: &monokai
     primary:
       background: '#2D2A2E'
       foreground: '#FCFCFA'
-
-    # Normal colors
     normal:
       black:   '#403E41'
       red:     '#FF6188'
@@ -351,8 +236,6 @@ schemes:
       magenta: '#AB9DF2'
       cyan:    '#78DCE8'
       white:   '#FCFCFA'
-
-    # Bright colors
     bright:
       black:   '#727072'
       red:     '#FF6188'
@@ -363,215 +246,85 @@ schemes:
       cyan:    '#78DCE8'
       white:   '#FCFCFA'
 
-  ### Nord ###
-  Nord: &Nord
-    # Default colors
+  jellybeans: &jellybeans
     primary:
-      background: '#2E3440'
-      foreground: '#D8DEE9'
-
-    # Normal colors
-    normal:
-      black:   '#3B4252'
-      red:     '#BF616A'
-      green:   '#A3BE8C'
-      yellow:  '#EBCB8B'
-      blue:    '#81A1C1'
-      magenta: '#B48EAD'
-      cyan:    '#88C0D0'
-      white:   '#E5E9F0'
-
-    # Bright colors
-    bright:
-      black:   '#4C566A'
-      red:     '#BF616A'
-      green:   '#A3BE8C'
-      yellow:  '#EBCB8B'
-      blue:    '#81A1C1'
-      magenta: '#B48EAD'
-      cyan:    '#8FBCBB'
-      white:   '#ECEFF4'
-
-  ### Oceanic Next ###
-  OceanicNext: &OceanicNext
-    # Default colors
-    primary:
-      background: '#1b2b34'
-      foreground: '#d8dee9'
-
-    # Colors the cursor will use if `custom_cursor_colors` is true
+      background: '#161616'
+      foreground: '#e4e4e4'
     cursor:
-      text: '#1b2b34'
-      cursor: '#ffffff'
-
-    # Normal colors
+      text:    '#feffff'
+      cursor:  '#ffb472'  
     normal:
-      black:   '#343d46'
-      red:     '#EC5f67'
-      green:   '#99C794'
-      yellow:  '#FAC863'
-      blue:    '#6699cc'
-      magenta: '#c594c5'
-      cyan:    '#5fb3b3'
-      white:   '#d8dee9'
-
-    # Bright colors
+      black:   '#a3a3a3'
+      red:     '#e98885'
+      green:   '#a3c38b'
+      yellow:  '#ffc68d'
+      blue:    '#a6cae2'
+      magenta: '#e7cdfb'
+      cyan:    '#00a69f'
+      white:   '#e4e4e4'
     bright:
-      black:   '#343d46'
-      red:     '#EC5f67'
-      green:   '#99C794'
-      yellow:  '#FAC863'
-      blue:    '#6699cc'
-      magenta: '#c594c5'
-      cyan:    '#5fb3b3'
-      white:   '#d8dee9'
+      black:   '#c8c8c8'
+      red:     '#ffb2b0'
+      green:   '#c8e2b9'
+      yellow:  '#ffe1af'
+      blue:    '#bddff7'
+      magenta: '#fce2ff'
+      cyan:    '#0bbdb6'
+      white:   '#feffff'
 
-  ### Palenight ###
-  Palenight: &Palenight
-    # Default colors
+  molokai: &molokai
     primary:
-      background: '#292d3e'
-      foreground: '#d0d0d0'
-
-    # Normal colors
+      background: '#1b1d1e'
+      foreground: '#f8f8f2'
     normal:
-      black:   '#292d3e'
-      red:     '#f07178'
-      green:   '#c3e88d'
-      yellow:  '#ffcb6b'
-      blue:    '#82aaff'
-      magenta: '#c792ea'
-      cyan:    '#89ddff'
-      white:   '#d0d0d0'
-
-    # Bright colors
-    bright:
-      black:   '#434758'
-      red:     '#ff8b92'
-      green:   '#ddffa7'
-      yellow:  '#ffe585'
-      blue:    '#9cc4ff'
-      magenta: '#e1acff'
-      cyan:    '#a3f7ff'
-      white:   '#ffffff'
-
-  ### Solarized Dark ###
-  SolarizedDark: &SolarizedDark
-    # Default colors
-    primary:
-      background: '#002b36' # base03
-      foreground: '#839496' # base0
-
-    # Cursor colors
-    cursor:
-      text:   '#002b36' # base03
-      cursor: '#839496' # base0
-
-    # Normal colors
-    normal:
-      black:   '#073642' # base02
-      red:     '#dc322f' # red
-      green:   '#859900' # green
-      yellow:  '#b58900' # yellow
-      blue:    '#268bd2' # blue
-      magenta: '#d33682' # magenta
-      cyan:    '#2aa198' # cyan
-      white:   '#eee8d5' # base2
-
-    # Bright colors
-    bright:
-      black:   '#002b36' # base03
-      red:     '#cb4b16' # orange
-      green:   '#586e75' # base01
-      yellow:  '#657b83' # base00
-      blue:    '#839496' # base0
-      magenta: '#6c71c4' # violet
-      cyan:    '#93a1a1' # base1
-      white:   '#fdf6e3' # base3
-
-  ### Solarized Light ###
-  SolarizedLight: &SolarizedLight
-    # Default colors
-    primary:
-      background: '#fdf6e3' # base3
-      foreground: '#657b83' # base00
-
-    # Cursor colors
-    cursor:
-      text:   '#fdf6e3' # base3
-      cursor: '#657b83' # base00
-
-    # Normal colors
-    normal:
-      black:   '#073642' # base02
-      red:     '#dc322f' # red
-      green:   '#859900' # green
-      yellow:  '#b58900' # yellow
-      blue:    '#268bd2' # blue
-      magenta: '#d33682' # magenta
-      cyan:    '#2aa198' # cyan
-      white:   '#eee8d5' # base2
-
-    # Bright colors
-    bright:
-      black:   '#002b36' # base03
-      red:     '#cb4b16' # orange
-      green:   '#586e75' # base01
-      yellow:  '#657b83' # base00
-      blue:    '#839496' # base0
-      magenta: '#6c71c4' # violet
-      cyan:    '#93a1a1' # base1
-      white:   '#fdf6e3' # base3
-
-  ### Tomorrow Night ###
-  TomorrowNight: &TomorrowNight
-     # Default colors
-    primary:
-      background: '#1d1f21'
-      foreground: '#c5c8c6'
-
-    # Colors the cursor will use if `custom_cursor_colors` is true
-    cursor:
-      text: '#1d1f21'
-      cursor: '#ffffff'
-
-    # Normal colors
-    normal:
-      black:   '#1d1f21'
-      red:     '#cc6666'
-      green:   '#b5bd68'
-      yellow:  '#e6c547'
-      blue:    '#81a2be'
-      magenta: '#b294bb'
-      cyan:    '#70c0ba'
-      white:   '#373b41'
-
-    # Bright colors
+      black:   '#333333'
+      red:     '#c4265e'
+      green:   '#86b42b'
+      yellow:  '#b3b42b'
+      blue:    '#6a7ec8'
+      magenta: '#8c6bc8'
+      cyan:    '#56adbc'
+      white:   '#e3e3dd'
     bright:
       black:   '#666666'
-      red:     '#ff3334'
-      green:   '#9ec400'
-      yellow:  '#f0c674'
-      blue:    '#81a2be'
-      magenta: '#b77ee0'
-      cyan:    '#54ced6'
-      white:   '#282a2e'
+      red:     '#f92672'
+      green:   '#a6e22e'
+      yellow:  '#e2e22e'
+      blue:    '#819aff'
+      magenta: '#ae81ff'
+      cyan:    '#66d9ef'
+      white:   '#f8f8f2'
 
-  # Cyberpunk-Neon colours
-  CyberpunkNeon: &CyberpunkNeon
-    # Default colours
+  solarized-dark: &solarized-dark
+    primary:
+      background: '#002b36' 
+      foreground: '#839496' 
+    cursor:
+      text:   '#002b36' 
+      cursor: '#839496' 
+    normal:
+      black:   '#073642'
+      red:     '#dc322f'
+      green:   '#859900'
+      yellow:  '#b58900'
+      blue:    '#268bd2'
+      magenta: '#d33682'
+      cyan:    '#2aa198'
+      white:   '#eee8d5'
+    bright:
+      black:   '#002b36'
+      red:     '#cb4b16'
+      green:   '#586e75'
+      yellow:  '#657b83'
+      blue:    '#839496'
+      magenta: '#6c71c4'
+      cyan:    '#93a1a1'
+      white:   '#fdf6e3'
+
+  cyberpunk-neon: &cyberpunk-neon
     primary:
       background: '0x000b1e'
       foreground: '0x0abdc6'
-  
-    # Colors that should be used to draw the terminal cursor. If these are unset,
-    # the cursor colour will be the inverse of the cell colour.
-    # cursor:
-    #   text: '0x2e2e2d'
-    #   # text: '0x000000'
-    #   cursor: '0xffffff'
-  
-    # Normal colors
     normal:
       black:   '0x123e7c'
       red:     '0xff0000'
@@ -581,8 +334,6 @@ schemes:
       magenta: '0x711c91'
       cyan:    '0x0abdc6'
       white:   '0xd7d7d5'
-  
-    # Bright colors
     bright:
       black:   '0x1c61c2'
       red:     '0xff0000'
@@ -592,8 +343,6 @@ schemes:
       magenta: '0x711c91'
       cyan:    '0x0abdc6'
       white:   '0xd7d7d5'
-  
-    # dim colors
     dim:
       black:   '0x1c61c2'
       red:     '0xff0000'
@@ -604,16 +353,10 @@ schemes:
       cyan:    '0x0abdc6'
       white:   '0xd7d7d5'
 
-  # Tokyo Night theme, based on both:
-  #   https://github.com/ghifarit53/tokyonight-vim
-  #   https://github.com/enkia/tokyo-night-vscode-theme
-  TokyoNight: &TokyoNight
-    # Default colors
+  tokyo-night: &tokyo-night
     primary:
       background: '0x1a1b26'
       foreground: '0xa9b1d6'
-
-    # Normal colors
     normal:
       black:   '0x32344a'
       red:     '0xf7768e'
@@ -623,8 +366,6 @@ schemes:
       magenta: '0xad8ee6'
       cyan:    '0x449dab'
       white:   '0x787c99'
-
-    # Bright colors
     bright:
       black:   '0x444b6a'
       red:     '0xff7a93'
@@ -635,58 +376,40 @@ schemes:
       cyan:    '0x0db9d7'
       white:   '0xacb0d0'
 
-  TokyoNightStorm: &TokyoNightStorm
-    # Default colors
+  pencil: &pencil
     primary:
-      background: '0x24283b'
-      foreground: '0xa9b1d6'
-
-    # Normal colors
+      background: '#212121'
+      foreground: '#f1f1f1'
     normal:
-      black:   '0x32344a'
-      red:     '0xf7768e'
-      green:   '0x9ece6a'
-      yellow:  '0xe0af68'
-      blue:    '0x7aa2f7'
-      magenta: '0xad8ee6'
-      cyan:    '0x449dab'
-      white:   '0x9699a8'
-
-    # Bright colors
+      black:   '#212121'
+      red:     '#fb007a'
+      green:   '#5fd7af'
+      yellow:  '#f3e430'
+      blue:    '#20bbfc'
+      magenta: '#6855de'
+      cyan:    '#4fb8cc'
+      white:   '#f1f1f1'
     bright:
-      black:   '0x444b6a'
-      red:     '0xff7a93'
-      green:   '0xb9f27c'
-      yellow:  '0xff9e64'
-      blue:    '0x7da6ff'
-      magenta: '0xbb9af7'
-      cyan:    '0x0db9d7'
-      white:   '0xacb0d0'
-  
+      black:   '#212121'
+      red:     '#fb007a'
+      green:   '#5fd7af'
+      yellow:  '#f3e430'
+      blue:    '#20bbfc'
+      magenta: '#6855de'
+      cyan:    '#4fb8cc'
+      white:   '#f1f1f1'
 
-######################################################################
-## SET THEME: Choose ONE color scheme from those in the above list. ##
-## ###################################################################
-# Available themes are:
-# *DoomOne
-# *Dracula
-# *GruvboxDark
-# *MonokaiPro
-# *Nord
-# *OceanicNext
-# *Palenight
-# *SolarizedLight
-# *SolarizedDark
-# *TomorrowNight
-# *CyberpunkNeon
-# *TokyoNight
-# *TokyoNightStorm
 
-colors: *Dracula
-
-#######################################
-##       END OF COLOR SCHEMES        ##
-#######################################
+# colors: *hyper
+# colors: *dracula
+# colors: *gruvbox-dark
+# colors: *monokai
+# colors: *jellybeans
+colors: *molokai
+# colors: *solarized-dark
+# colors: *cyberpunk-neon
+# colors: *tokyo-night
+# colors: *pencil
 
 # Visual Bell
 #
